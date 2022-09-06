@@ -27,11 +27,12 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
-<img src='.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='InstagramVideo.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 GIF created with [XRecorder].
 
 ## Notes
+I had internet issues to make the Walkthrough Video.
 
 ## Open-source libraries used
 
