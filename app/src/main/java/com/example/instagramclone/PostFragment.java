@@ -100,12 +100,9 @@ public class PostFragment extends DialogFragment {
                 String description = etDescription.getText().toString();
                 if(description.isEmpty()) {
                     Toast.makeText(getContext(), "Description cannot be empty", Toast.LENGTH_SHORT).show();
-                    return;
+
                 }
-                if (photoFile == null || ivPostImage.getDrawable() == null) {
-                    Toast.makeText(getContext(), "There is no image!", Toast.LENGTH_SHORT).show();
-                    return;
-                }
+
                 ParseUser currentUser = ParseUser.getCurrentUser();
                 savePost(description, currentUser, photoFile);
             }
@@ -183,12 +180,19 @@ public class PostFragment extends DialogFragment {
                 if (e != null) {
                     Log.e(TAG, "Error while saving", e);
                     Toast.makeText(getContext(), "Error while saving!", Toast.LENGTH_SHORT).show();
+                    pbloading.setVisibility(View.INVISIBLE);
+                    return;
+                }
+                if (photoFile == null || ivPostImage.getDrawable() == null) {
+                    Toast.makeText(getContext(), "There is no image!", Toast.LENGTH_SHORT).show();
+                    pbloading.setVisibility(View.INVISIBLE);
+                    return;
                 }
                 Log.i(TAG, "Post save was successful!!!");
                 etDescription.setText("");
                 ivPostImage.setImageResource(0);
 
-                pbloading.setVisibility(View.INVISIBLE);
+
 
             }
         });
