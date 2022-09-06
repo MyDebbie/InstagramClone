@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/roose/AndroidStudioProjects/InstagramClone/app/src/main/res/drawable/add_post.xml" value="0.1" />
+        <entry key="..\:/Users/roose/AndroidStudioProjects/InstagramClone/app/src/main/res/drawable/add_post_filled.xml" value="0.1" />
+        <entry key="..\:/Users/roose/AndroidStudioProjects/InstagramClone/app/src/main/res/drawable/add_post_selector.xml" value="0.172" />
+        <entry key="..\:/Users/roose/AndroidStudioProjects/InstagramClone/app/src/main/res/drawable/comment.xml" value="0.1" />
+        <entry key="..\:/Users/roose/AndroidStudioProjects/InstagramClone/app/src/main/res/drawable/comment_outline (1).xml" value="0.226" />
+        <entry key="..\:/Users/roose/AndroidStudioProjects/InstagramClone/app/src/main/res/drawable/comment_outline.xml" value="0.226" />
+        <entry key="..\:/Users/roose/AndroidStudioProjects/InstagramClone/app/src/main/res/drawable/heart.xml" value="0.1725" />
+        <entry key="..\:/Users/roose/AndroidStudioProjects/InstagramClone/app/src/main/res/drawable/home.xml" value="0.1" />
+        <entry key="..\:/Users/roose/AndroidStudioProjects/InstagramClone/app/src/main/res/drawable/home_selector.xml" value="0.1" />
+        <entry key="..\:/Users/roose/AndroidStudioProjects/InstagramClone/app/src/main/res/drawable/ic_launcher_background.xml" value="0.172" />
+        <entry key="..\:/Users/roose/AndroidStudioProjects/InstagramClone/app/src/main/res/drawable/ic_outline_add_box_24.xml" value="0.1" />
+        <entry key="..\:/Users/roose/AndroidStudioProjects/InstagramClone/app/src/main/res/drawable/instagram.xml" value="0.1" />
+        <entry key="..\:/Users/roose/AndroidStudioProjects/InstagramClone/app/src/main/res/drawable/navigation_selector.xml" value="0.1" />
+        <entry key="..\:/Users/roose/AndroidStudioProjects/InstagramClone/app/src/main/res/drawable/photo_camera.xml" value="0.1" />
+        <entry key="..\:/Users/roose/AndroidStudioProjects/InstagramClone/app/src/main/res/drawable/profile.xml" value="0.1" />
+        <entry key="..\:/Users/roose/AndroidStudioProjects/InstagramClone/app/src/main/res/drawable/profile_selector.xml" value="0.1" />
+        <entry key="..\:/Users/roose/AndroidStudioProjects/InstagramClone/app/src/main/res/drawable/save (1).xml" value="0.226" />
+        <entry key="..\:/Users/roose/AndroidStudioProjects/InstagramClone/app/src/main/res/drawable/save.xml" value="0.226" />
+        <entry key="..\:/Users/roose/AndroidStudioProjects/InstagramClone/app/src/main/res/drawable/send.xml" value="0.1" />
+        <entry key="..\:/Users/roose/AndroidStudioProjects/InstagramClone/app/src/main/res/drawable/user.xml" value="0.1" />
+        <entry key="..\:/Users/roose/AndroidStudioProjects/InstagramClone/app/src/main/res/font/instagram_font.xml" value="0.298974358974359" />
+        <entry key="..\:/Users/roose/AndroidStudioProjects/InstagramClone/app/src/main/res/layout/activity_login.xml" value="0.1" />
+        <entry key="..\:/Users/roose/AndroidStudioProjects/InstagramClone/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/Users/roose/AndroidStudioProjects/InstagramClone/app/src/main/res/layout/fragment_home.xml" value="0.4" />
+        <entry key="..\:/Users/roose/AndroidStudioProjects/InstagramClone/app/src/main/res/layout/fragment_post.xml" value="0.1" />
+        <entry key="..\:/Users/roose/AndroidStudioProjects/InstagramClone/app/src/main/res/layout/fragment_post2.xml" value="0.21195652173913043" />
+        <entry key="..\:/Users/roose/AndroidStudioProjects/InstagramClone/app/src/main/res/layout/fragment_profile.xml" value="0.4" />
+        <entry key="..\:/Users/roose/AndroidStudioProjects/InstagramClone/app/src/main/res/layout/item_post.xml" value="0.4" />
+        <entry key="..\:/Users/roose/AndroidStudioProjects/InstagramClone/app/src/main/res/layout/toolbar.xml" value="0.2" />
+        <entry key="..\:/Users/roose/AndroidStudioProjects/InstagramClone/app/src/main/res/menu/bottom_bar.xml" value="0.1" />
+        <entry key="..\:/Users/roose/AndroidStudioProjects/InstagramClone/app/src/main/res/menu/send_menu.xml" value="0.1" />
+        <entry key="..\:/Users/roose/AndroidStudioProjects/InstagramClone/app/src/main/res/xml/fileprovider.xml" value="0.13171225937183384" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

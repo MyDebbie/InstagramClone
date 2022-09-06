@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginStart="5dp"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <TextView
+        android:id="@+id/tvUserName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="15dp"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        tools:text="Debbie" />
+
+
+    <ImageView
+        android:id="@+id/ivPost_Image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvUserName"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="45dp"
+        android:layout_alignParentTop="true"
+        tools:srcCompat="@tools:sample/avatars" />
+
+
+    <ImageView
+        android:id="@+id/ivheart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ivPost_Image"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="10dp"
+        app:srcCompat="@drawable/heart" />
+
+    <ImageView
+        android:id="@+id/ivcomment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ivPost_Image"
+        android:layout_toEndOf="@id/ivheart"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        app:srcCompat="@drawable/comment_outline" />
+
+    <ImageView
+        android:id="@+id/ivsend"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ivPost_Image"
+        android:layout_toEndOf="@id/ivcomment"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        app:srcCompat="@drawable/send1" />
+
+
+    <ImageView
+        android:id="@+id/ivsave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ivPost_Image"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="10dp"
+        app:srcCompat="@drawable/save" />
+
+
+    <TextView
+        android:id="@+id/tvDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ivheart"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        tools:text="My Post so far" />
+
+
+</RelativeLayout>

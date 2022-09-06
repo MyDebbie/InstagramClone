@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".models.MainActivity"
+    android:id="@+id/bottom_bar_Container">
+
+    <item android:id="@+id/home"
+        android:title="Home"
+        android:enabled="true"
+        android:icon="@drawable/home_selector"
+        app:showAsAction="ifRoom"/>
+
+
+
+    <item android:id="@+id/add_post"
+        android:title="Add"
+        android:enabled="true"
+        android:icon="@drawable/add_post_selector"
+        app:showAsAction="ifRoom"/>
+
+
+    <item android:id="@+id/profile"
+        android:title="Profile"
+        android:enabled="true"
+        android:icon="@drawable/profile_selector"
+        app:showAsAction="ifRoom"/>
+
+
+</menu>

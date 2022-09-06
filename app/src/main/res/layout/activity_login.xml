@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="16dp"
+    android:orientation="vertical"
+    tools:context=".LoginActivity">
+
+
+    <TextView
+        android:id="@+id/tvAppName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="30dp"
+        android:text="Instagram  "
+        android:fontFamily="@font/instagram_font"
+        android:textColor="@color/black"
+        android:textSize="24sp" />
+
+
+
+    <EditText
+        android:id="@+id/etUserName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_below="@id/tvAppName"
+        android:layout_weight="1"
+        android:ems="10"
+        android:hint="Username" />
+
+    <EditText
+        android:id="@+id/etPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/etUserName"
+        android:layout_weight="1"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:hint="Password" />
+
+    <Button
+        android:id="@+id/btnLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/etPassword"
+        android:layout_weight="1"
+        android:backgroundTint="@color/blue"
+        android:text="LOG IN"/>
+
+    <Button
+        android:id="@+id/btnSignUp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnLogin"
+        android:layout_weight="1"
+        android:backgroundTint="@color/green"
+        android:text="SIGN UP"/>
+
+
+</RelativeLayout>
