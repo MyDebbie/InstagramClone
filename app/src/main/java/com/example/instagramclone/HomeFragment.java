@@ -80,16 +80,16 @@ public class HomeFragment extends DialogFragment {
         query.addDescendingOrder(Post.KEY_CREATED_AT);
         query.findInBackground(new FindCallback<Post>() {
             @Override
-            public void done(List<Post> postss, ParseException e) {
+            public void done(List<Post> posts1, ParseException e) {
                 if (e != null) {
                     Log.e(TAG, "Issue with getting posts", e);
                     return;
                 }
-                for(Post post: postss) {
+                for(Post post: posts1) {
                     Log.i(TAG, "Post: " + post.getDescription() + ", username: " + post.getUser().getUsername());
 
                 }
-                posts.addAll(postss);
+                posts.addAll(posts1);
                 adapter.notifyDataSetChanged();
 
             }

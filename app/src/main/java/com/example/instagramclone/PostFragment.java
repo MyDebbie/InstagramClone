@@ -88,7 +88,7 @@ public class PostFragment extends DialogFragment {
             @Override
             public void onClick(View view) {
                 launchCamera();
-                Toast.makeText(getContext(), "Camera", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getContext(), "Camera launch", Toast.LENGTH_SHORT).show();
 
             }
         });
