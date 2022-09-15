@@ -1,31 +1,34 @@
-package com.example.instagramclone;
+package com.example.instagramclone.Adapter;
+
 
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
-import com.parse.ParseFile;
+import com.example.instagramclone.Post;
+import com.example.instagramclone.R;
+import com.example.instagramclone.User;
 
 import java.util.List;
 
-public class PostsAdapter extends RecyclerView.Adapter<PostsAdapter.ViewHolder> {
+public class ProfileAdapter extends RecyclerView.Adapter<ProfileAdapter.ViewHolder> {
 
     Context context;
     List<Post> posts;
 
 
     // Pass in the context and list of posts
-    public PostsAdapter (Context context, List<Post> posts) {
+    public ProfileAdapter (Context context, List<Post> posts) {
         this.context = context;
         this.posts = posts;
+
     }
 
 
@@ -33,7 +36,7 @@ public class PostsAdapter extends RecyclerView.Adapter<PostsAdapter.ViewHolder> 
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(context).inflate(R.layout.item_post, parent, false);
+        View view = LayoutInflater.from(context).inflate(R.layout.post, parent, false);
         return new ViewHolder(view);
     }
 
@@ -46,6 +49,7 @@ public class PostsAdapter extends RecyclerView.Adapter<PostsAdapter.ViewHolder> 
         Post post = posts.get(position);
         // Bind the tweet with view holder
         holder.bind(post);
+
     }
 
     @Override
@@ -53,28 +57,22 @@ public class PostsAdapter extends RecyclerView.Adapter<PostsAdapter.ViewHolder> 
 
     public class ViewHolder extends RecyclerView.ViewHolder {
 
-        ImageView ivPost_Image;
-        TextView tvDescription;
-        TextView tvUserName;
+        ImageView ivPost_Image1;
+
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
 
-            ivPost_Image = itemView.findViewById(R.id.ivPost_Image);
-            tvDescription = itemView.findViewById(R.id.tvDescription);
-            tvUserName = itemView.findViewById(R.id.tvUserName);
+            ivPost_Image1 = itemView.findViewById(R.id.ivPost_Image1);
 
         }
         public void bind(Post post) {
-            tvDescription.setText(post.getDescription());
-            tvUserName.setText(post.getUser().getUsername());
 
 
-            if (post.getImage() != null){
-                Glide.with(context).load(post.getImage().getUrl()).into(ivPost_Image);
-            }
-
+                Glide.with(context).load(post.getImage().getUrl()).into(ivPost_Image1);
 
         }
+
     }
 }
+

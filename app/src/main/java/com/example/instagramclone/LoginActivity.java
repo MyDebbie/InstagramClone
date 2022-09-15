@@ -1,7 +1,6 @@
 package com.example.instagramclone;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.FragmentManager;
 
 import android.content.Intent;
@@ -12,6 +11,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.example.instagramclone.fragments.HomeFragment;
 import com.parse.LogInCallback;
 import com.parse.ParseException;
 import com.parse.ParseUser;
@@ -65,7 +65,7 @@ public class LoginActivity extends AppCompatActivity {
 
     private void SignUpUser(String username, String password) {
         Log.i(TAG, "Attempting to sign up user" + username);
-        ParseUser user = new ParseUser();
+        User user = new User();
 
         user.setUsername(username);
         user.setPassword(password);
@@ -98,17 +98,13 @@ public class LoginActivity extends AppCompatActivity {
                     return;
                 }
                 // Navigate to the main activity
-                showEditDialog();
+                goMainActivity();
                 Toast.makeText(LoginActivity.this, "Success!", Toast.LENGTH_SHORT).show();
             }
         });
     }
 
-    private void showEditDialog() {
-        FragmentManager fm = getSupportFragmentManager();
-        HomeFragment homeFragment = HomeFragment.newInstance("Home");
-        homeFragment.show(fm, "Home_Fragament");
-    }
+
 
     private void goMainActivity() {
         Intent intent = new Intent(this, MainActivity.class);

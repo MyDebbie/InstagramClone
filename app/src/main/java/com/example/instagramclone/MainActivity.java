@@ -3,16 +3,17 @@ package com.example.instagramclone;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
-import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 
 import android.content.Context;
-import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 
 
+import com.example.instagramclone.fragments.HomeFragment;
+import com.example.instagramclone.fragments.PostFragment;
+import com.example.instagramclone.fragments.ProfileFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
 
@@ -59,7 +60,6 @@ public class MainActivity extends AppCompatActivity {
                     }
                 });
                 bottomNavigationView.setSelectedItemId(R.id.home);
-
     }
 
     @Override

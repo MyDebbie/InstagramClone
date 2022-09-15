@@ -1,4 +1,4 @@
-package com.example.instagramclone;
+package com.example.instagramclone.fragments;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -10,34 +10,30 @@ import android.os.Environment;
 import android.provider.MediaStore;
 import android.util.Log;
 import android.view.LayoutInflater;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
 
 import androidx.annotation.Nullable;
-import androidx.appcompat.widget.Toolbar;
 import androidx.core.content.FileProvider;
 import androidx.fragment.app.DialogFragment;
+import androidx.fragment.app.Fragment;
 
-import com.parse.FindCallback;
+import com.example.instagramclone.Post;
+import com.example.instagramclone.R;
 import com.parse.ParseException;
 import com.parse.ParseFile;
-import com.parse.ParseQuery;
 import com.parse.ParseUser;
 import com.parse.SaveCallback;
 
 import java.io.File;
-import java.util.List;
 
-public class PostFragment extends DialogFragment {
+public class PostFragment extends Fragment {
 
     public static final String TAG = "MainActivity";
     public static final int CAPTURE_IMAGE_ACTIVITY_REQUEST_CODE = 42;

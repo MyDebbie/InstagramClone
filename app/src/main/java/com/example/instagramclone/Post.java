@@ -12,6 +12,7 @@ public class Post extends ParseObject {
     public static final String KEY_DESCRIPTION = "description";
     public static final String KEY_Image = "image";
     public static final String KEY_User = "user";
+    public static final String KEY_CREATED_AT = "created_at";
 
 
     public String getDescription() {
@@ -22,20 +23,20 @@ public class Post extends ParseObject {
         put(KEY_DESCRIPTION, description);
     }
 
-    public ParseFile getImage() {
-        return getParseFile(KEY_Image);
+
+    public ParseFile getImage() { return getParseFile(KEY_Image); }
+
+    public void setImage(ParseFile parseFile) { put(KEY_Image, parseFile); }
+
+    public ParseUser getUser() { return getParseUser(KEY_User); }
+
+    public void setUser(ParseUser user) { put(KEY_User, user); }
+
+
+    public String getFormattedTimestamp(){
+        return TimeFormatter.getTimeDifference(KEY_CREATED_AT);
     }
 
-    public void setImage(ParseFile parseFile) {
-        put(KEY_Image, parseFile);
-    }
 
-    public ParseUser getUser() {
-        return getParseUser(KEY_User);
-    }
-
-    public void setUser(ParseUser user) {
-        put(KEY_User, user);
-    }
 
 }

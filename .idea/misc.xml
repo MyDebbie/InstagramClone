@@ -3,6 +3,13 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Debbie/StudioProjects/InstagramClone/app/src/main/res/drawable/profile.xml" value="0.255" />
+        <entry key="..\:/Users/Debbie/StudioProjects/InstagramClone/app/src/main/res/drawable/profile_filled.xml" value="0.255" />
+        <entry key="..\:/Users/Debbie/StudioProjects/InstagramClone/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/Users/Debbie/StudioProjects/InstagramClone/app/src/main/res/layout/fragment_home.xml" value="0.1" />
+        <entry key="..\:/Users/Debbie/StudioProjects/InstagramClone/app/src/main/res/layout/fragment_profile.xml" value="0.536" />
+        <entry key="..\:/Users/Debbie/StudioProjects/InstagramClone/app/src/main/res/layout/item_post.xml" value="0.4" />
+        <entry key="..\:/Users/Debbie/StudioProjects/InstagramClone/app/src/main/res/layout/post.xml" value="0.24947916666666667" />
         <entry key="..\:/Users/roose/AndroidStudioProjects/InstagramClone/app/src/main/res/drawable/add_post.xml" value="0.1" />
         <entry key="..\:/Users/roose/AndroidStudioProjects/InstagramClone/app/src/main/res/drawable/add_post_filled.xml" value="0.1" />
         <entry key="..\:/Users/roose/AndroidStudioProjects/InstagramClone/app/src/main/res/drawable/add_post_selector.xml" value="0.172" />
