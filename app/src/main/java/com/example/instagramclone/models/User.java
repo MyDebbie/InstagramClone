@@ -1,18 +1,25 @@
-package com.example.instagramclone;
+package com.example.instagramclone.models;
 
 import com.parse.ParseClassName;
 import com.parse.ParseFile;
 import com.parse.ParseObject;
 import com.parse.ParseUser;
 
+import org.parceler.Parcel;
 
 
 @ParseClassName("_User")
+@Parcel(analyze = User.class)
+
 public class User extends ParseUser {
 
     public static final String KEY_UserName = "username";
     public static final String KEY_Password = "password";
     public static final String KEY_Profile_Image = "profile_image";
+
+
+
+    public User() {}
 
 
     public ParseFile getImage() { return getParseFile(KEY_Profile_Image); }

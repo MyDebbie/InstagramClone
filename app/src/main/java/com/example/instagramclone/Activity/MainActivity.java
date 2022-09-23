@@ -1,4 +1,4 @@
-package com.example.instagramclone;
+package com.example.instagramclone.Activity;
 
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -11,6 +11,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 
+import com.example.instagramclone.R;
 import com.example.instagramclone.fragments.HomeFragment;
 import com.example.instagramclone.fragments.PostFragment;
 import com.example.instagramclone.fragments.ProfileFragment;

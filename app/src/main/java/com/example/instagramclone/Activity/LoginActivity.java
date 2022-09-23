@@ -1,7 +1,6 @@
-package com.example.instagramclone;
+package com.example.instagramclone.Activity;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.FragmentManager;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -11,7 +10,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.example.instagramclone.fragments.HomeFragment;
+import com.example.instagramclone.R;
+import com.example.instagramclone.models.User;
 import com.parse.LogInCallback;
 import com.parse.ParseException;
 import com.parse.ParseUser;
@@ -64,7 +64,7 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     private void SignUpUser(String username, String password) {
-        Log.i(TAG, "Attempting to sign up user" + username);
+        Log.i(TAG, "Attempting to sign up user " + username);
         User user = new User();
 
         user.setUsername(username);
@@ -87,7 +87,7 @@ public class LoginActivity extends AppCompatActivity {
 
 
     private void loginUser(String username, String password) {
-        Log.i(TAG, "Attempting to login user" + username);
+        Log.i(TAG, "Attempting to login user " + username);
 
         ParseUser.logInInBackground(username, password, new LogInCallback() {
             @Override

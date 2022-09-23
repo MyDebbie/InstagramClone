@@ -6,14 +6,14 @@
     android:layout_height="match_parent"
     android:layout_margin="16dp"
     android:orientation="vertical"
-    tools:context=".LoginActivity">
+    tools:context=".Activity.LoginActivity">
 
 
     <TextView
         android:id="@+id/tvUserName1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
+        android:layout_marginStart="12dp"
         android:layout_marginTop="20dp"
         android:layout_marginBottom="15dp"
         android:textColor="@color/black"
@@ -24,8 +24,8 @@
 
     <ImageView
         android:id="@+id/ivProfile_Image"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
         android:layout_below="@id/tvUserName1"
         android:layout_alignParentTop="true"
         android:layout_marginStart="10dp"
@@ -40,7 +40,7 @@
         android:layout_height="match_parent"
         android:layout_below="@id/ivProfile_Image"
         android:layout_marginStart="0dp"
-        android:layout_marginTop="0dp"
+        android:layout_marginTop="5dp"
         android:clipToPadding="false" />
 
 
