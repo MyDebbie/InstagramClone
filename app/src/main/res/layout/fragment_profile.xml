@@ -52,6 +52,6 @@
         android:layout_centerInParent="true"
         android:layout_weight="2"
         android:backgroundTint="@color/colorPrimary"
-        android:text="LOG OUT"/>
+        android:text="@string/log_out"/>
 
 </RelativeLayout>

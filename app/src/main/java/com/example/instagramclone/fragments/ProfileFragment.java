@@ -205,8 +205,8 @@ public class ProfileFragment extends Fragment {
 
 
     private void saveProfile( ParseUser currentUser, File photoFile) {
-        User user = new User();
 
+        User user = (User) currentUser;
 
         user.setImage(new ParseFile(photoFile));
         user.saveInBackground(new SaveCallback() {

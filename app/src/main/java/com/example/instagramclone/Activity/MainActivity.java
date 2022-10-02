@@ -36,6 +36,8 @@ public class MainActivity extends AppCompatActivity {
 
         Toolbar toolbar =  findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        getSupportActionBar().setIcon(R.drawable.camera);
+        getSupportActionBar().setTitle("       Instagram");
 
         bottomNavigationView = findViewById(R.id.bottom_navigation);
 

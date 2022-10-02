@@ -3,13 +3,12 @@ package com.example.instagramclone.Adapter;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.drawable.Drawable;
-import android.os.Parcelable;
 import android.view.LayoutInflater;
-import android.view.RoundedCorner;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+
 
 import androidx.annotation.NonNull;
 import androidx.core.content.ContextCompat;
@@ -19,12 +18,15 @@ import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.resource.bitmap.CircleCrop;
 import com.example.instagramclone.Activity.CommentActivity;
 import com.example.instagramclone.Activity.DetailActivity;
-import com.example.instagramclone.Activity.MainActivity;
 import com.example.instagramclone.models.Post;
 import com.example.instagramclone.R;
 import com.example.instagramclone.TimeFormatter;
 import com.example.instagramclone.models.User;
+import com.parse.ParseException;
+import com.parse.ParseUser;
+import com.parse.SaveCallback;
 
+import org.json.JSONException;
 import org.parceler.Parcels;
 
 import java.util.List;
@@ -60,7 +62,11 @@ public class PostsAdapter extends RecyclerView.Adapter<PostsAdapter.ViewHolder> 
         // Get the data at position
         Post post = posts.get(position);
         // Bind the tweet with view holder
-        holder.bind(post);
+        try {
+            holder.bind(post);
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
     }
 
     @Override
@@ -112,7 +118,9 @@ public class PostsAdapter extends RecyclerView.Adapter<PostsAdapter.ViewHolder> 
 
 
         }
-        public void bind(Post post) {
+        public void bind(Post post) throws JSONException {
+            likers = Post.fromJsonArray(post.getLikes());
+
             tvDescription.setText(post.getDescription());
             tvUserName.setText(post.getUser().getUsername());
             String timeformat = TimeFormatter.getTimeDifference(post.getCreatedAt().toString());
@@ -120,6 +128,11 @@ public class PostsAdapter extends RecyclerView.Adapter<PostsAdapter.ViewHolder> 
 
             if (post.getImage() != null){
                 Glide.with(context).load(post.getImage().getUrl()).into(ivPost_Image);
+            }
+
+            if (likers.contains(ParseUser.getCurrentUser().getObjectId())) {
+                Drawable drawable = ContextCompat.getDrawable(context, R.drawable.red_heart);
+                drawable.setBounds(0, 0, drawable.getMinimumHeight(), drawable.getMinimumWidth());
             }
 
             ivPost_Image.setOnClickListener(new View.OnClickListener() {
@@ -135,23 +148,27 @@ public class PostsAdapter extends RecyclerView.Adapter<PostsAdapter.ViewHolder> 
             ivheart.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    //like = post.getLikes();
-
-
+                    int index;
+                    like = post.getNumLike();
+                    if (!likers.contains(ParseUser.getCurrentUser().getObjectId())) {
                         Drawable drawable = ContextCompat.getDrawable(context, R.drawable.red_heart);
-                        drawable.setBounds(0,0, drawable.getMinimumHeight(), drawable.getMinimumWidth());
-                        tvNumLikes.setText(String.valueOf(post.getLikes()));
+                        ivheart.setImageDrawable(drawable);
 
-                    //if (post.removeLikes(null))
-
-
-                    {
-                        drawable = ContextCompat.getDrawable(context, R.drawable.heart);
-                        drawable.setBounds(0,0, drawable.getMinimumHeight(), drawable.getMinimumWidth());
-
-                        tvNumLikes.setText(String.valueOf(post.getLikes()));
+                        like++;
+                        index = -1;
+                        tvNumLikes.setText(String.valueOf(like));
                     }
+                    else
 
+                        {
+                            Drawable drawable = ContextCompat.getDrawable(context, R.drawable.heart);
+                            ivheart.setImageDrawable(drawable);
+                            like--;
+                            index = likers.indexOf(ParseUser.getCurrentUser().getObjectId());
+
+                            tvNumLikes.setText(String.valueOf(like));
+                        }
+                    saveLike(post, like,index,ParseUser.getCurrentUser());
                 }
             });
 
@@ -159,7 +176,7 @@ public class PostsAdapter extends RecyclerView.Adapter<PostsAdapter.ViewHolder> 
             ivcomment.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    goCommentActivity();
+                    goCommentActivity(post);
                 }
             });
 
@@ -170,8 +187,33 @@ public class PostsAdapter extends RecyclerView.Adapter<PostsAdapter.ViewHolder> 
 
     }
 
-    private void goCommentActivity() {
+    private void saveLike(Post post, int like, int index,ParseUser currentuser){
+
+        post.setNumLike(like);
+        if (index == -1) {
+            post.setLikes(currentuser);
+            likers.add(currentuser.getObjectId());
+        }
+        else{
+            likers.remove(index);
+            post.removeLikes(likers);
+        }
+        post.saveInBackground(new SaveCallback() {
+            @Override
+            public void done(ParseException e) {
+                if (e != null) {
+
+                    return;
+                }
+
+
+        }
+    });
+}
+
+    private void goCommentActivity(Post post) {
         Intent intent = new Intent(context, CommentActivity.class);
+        intent.putExtra("Post", Parcels.wrap(post));
         context.startActivity(intent);
     }
 

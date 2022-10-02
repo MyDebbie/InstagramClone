@@ -4,8 +4,6 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:elevation="15dp"
-    app:logo="@drawable/camera"
-    app:title="Instagram"
     app:titleMarginStart="140dp"
     app:titleTextColor="@android:color/black">
 
